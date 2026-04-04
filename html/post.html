@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rematrix Gallery</title>
+    <link rel="icon" href="/assets/icons/rema.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/elements/buttons_text_statics.css" />
+    <link rel="stylesheet" href="/css/pages/index.css" />
+    <link rel="stylesheet" href="/css/css/screens_widths.css" />
+    <link rel="stylesheet" href="/css/elements/media_elements.css" />
+    <link rel="stylesheet" href="/css/pages/post.css" />
+  </head>
+  <header>
+    <div class="LOGO">
+      <a href="/">
+        <span>Re</span>
+        <span>Matrix</span>
+        <span>Gallery</span></a
+      >
+    </div>
+    <div>
+      <button class="rematrix_corners rematrix_button" id="Delete" error>
+        <div><span id="Delete_text" class="animated_text">Delete</span></div>
+      </button>
+    </div>
+  </header>
+  <body>
+    <div id="temploader">
+      <div class="temploader-dot"></div>
+      <div class="temploader-dot"></div>
+      <div class="temploader-dot"></div>
+    </div>
+    <div class="post_layout" id="post_layout">
+      <section class="post_section">
+        <div id="media_container" class="rematrix_corners"></div>
+
+        <h1 id="title"></h1>
+        <p id="disc" style="display: none"></p>
+
+        <div class="post_meta">
+          <div class="user" id="user_container" style="width: 100%">
+            <div class="profile">
+              <span id="pfp_picture"></span>
+              <div>
+                <span id="matrix_id" matrix_id=""></span>
+                <span id="socials_container">
+                  <span id="dc_link" class="dc_svg" target="_blank"></span>
+                  <a id="ig_link" class="ig_svg" target="_blank"></a>
+                  <a id="tg_link" class="pn_svg" target="_blank"></a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="post_buttons">
+          <a href="" id="download_media_button">
+            <button
+              no_animated_corner
+              class="rematrix_corners rematrix_button"
+              accent
+            >
+              <div>
+                <span class="animated_text">Download</span>
+              </div>
+            </button>
+          </a>
+          <button
+            no_animated_corner
+            accent
+            class="rematrix_corners rematrix_button"
+            id="meta_data_button"
+          >
+            <div>
+              <span class="animated_text">Metadata</span>
+            </div>
+          </button>
+        </div>
+        <textarea disabled wrap="off" id="meta_data_block"></textarea>
+      </section>
+    </div>
+    <textarea
+      type="text"
+      id="hidden_goods"
+      style="position: absolute; left: -9999px"
+      readonly
+    ></textarea>
+  </body>
+  <script type="module" src="/js/routes/post.js"></script>
+</html>

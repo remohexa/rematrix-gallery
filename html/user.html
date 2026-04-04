@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rematrix Profile</title>
+    <link rel="icon" href="/assets/icons/rema.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/elements/buttons_text_statics.css" />
+    <link rel="stylesheet" href="/css/pages/index.css" />
+    <link rel="stylesheet" href="/css/css/screens_widths.css" />
+    <link rel="stylesheet" href="/css/elements/media_elements.css" />
+    <link rel="stylesheet" href="/css/pages/user.css" />
+  </head>
+  <header>
+    <div class="LOGO">
+      <a href="/">
+        <span>Re</span>
+        <span>Matrix</span>
+        <span>Gallery</span></a
+      >
+    </div>
+    <div>
+      <button id="edit_profile" class="rematrix_corners rematrix_button">
+        <div><span id="edit_button_text" class="animated_text">Edit</span></div>
+      </button>
+    </div>
+  </header>
+  <body>
+    <section id="settings_box">
+      <div id="settings_box_container">
+        <div class="inner_profile">
+          <div class="rematrix_corners imgcontainer">
+            <div class="temploader" id="img_loader">
+              <div class="temploader-dot"></div>
+              <div class="temploader-dot"></div>
+              <div class="temploader-dot"></div>
+            </div>
+            <div class="temploader" precent id="img_loader_precent"></div>
+            <img id="pfp_img" class="pfp_image" src="" />
+          </div>
+
+          <div class="user_info">
+            <span class="green_p">( Username )</span>
+            <p class="grey_p" id="post_register_user_name"></p>
+            <span class="green_p">( Matrix id )</span>
+            <p class="grey_p" id="post_register_matrix_id"></p>
+          </div>
+        </div>
+        <div class="grey_p" id="user_socials_inner" style="display: none">
+          <div class="green_p" id="dc_icon" style="display: none">
+            <div class="shadow_wrapper">
+              <span id="dc_link" class="dc_svg"></span>
+            </div>
+          </div>
+          <div class="green_p" id="ig_icon" style="display: none">
+            <div class="shadow_wrapper">
+              <a id="ig_link" class="ig_svg" target="_blank"></a>
+            </div>
+          </div>
+          <div class="green_p" id="tg_icon" style="display: none">
+            <div class="shadow_wrapper">
+              <a id="tg_link" class="pn_svg" target="_blank"></a>
+            </div>
+          </div>
+        </div>
+        <div class="inner_profile_controls">
+          <div
+            class="control_taps"
+            style="display: none"
+            id="inner_profile_contorls_id"
+          >
+            <span class="multiple_choices_span" id="control_taps_2"
+              >Profile Picture</span
+            >
+            <span class="multiple_choices_span" id="control_taps_3"
+              >Socials</span
+            >
+          </div>
+          <div id="user_posts">
+            <div id="mediaViewer_place_holder">
+              This user haven't post anything yet.
+            </div>
+            <section class="img_viewer" id="mediaViewer"></section>
+          </div>
+          <div class="pfp_controls" id="pfp_contorls" style="display: none">
+            <p class="grey_p" style="margin-bottom: 0">
+              This's a preview version
+            </p>
+            <p class="green_p" style="margin-top: 0">
+              <span style="color: rgba(0, 0, 0, 0.6)"
+                >The Generate button will show a pre generated images</span
+              >
+            </p>
+            <p class="grey_p">Pick from</p>
+            <button
+              class="rematrix_corners rematrix_button"
+              id="gallery_pick_button"
+            >
+              <div>
+                <span class="animated_text disable_animation">Gallery</span>
+              </div>
+            </button>
+            <div class="">
+              <button
+                class="rematrix_corners rematrix_button"
+                error
+                id="default_pfp_button"
+              >
+                <div>
+                  <span class="animated_text disable_animation">Default</span>
+                </div>
+              </button>
+            </div>
+            <p class="grey_p">Generate Matrix picture</p>
+
+            <div class="rematrix_input">
+              <label for="pfp_seed"><span>Seed</span></label>
+              <input
+                placeholder="Random"
+                maxlength="100"
+                class="rematrix_corners corners_input disable_animation"
+                type="text"
+                id="pfp_seed"
+                readonly
+              />
+            </div>
+            <button
+              class="rematrix_corners rematrix_button"
+              id="generate_button"
+            >
+              <div>
+                <span class="animated_text disable_animation">Generate</span>
+              </div>
+            </button>
+            <button class="rematrix_corners rematrix_button" id="reset_button">
+              <div>
+                <span class="animated_text disable_animation">Reset</span>
+              </div>
+            </button>
+            <div id="options_parent">
+              <p class="green_p" style="margin-bottom: 0">Options</p>
+            </div>
+          </div>
+          <div
+            class="account_controls"
+            id="account_controls"
+            style="display: none"
+          >
+            <div class="rematrix_input">
+              <label for="ig_username"><span>Instagram-username</span></label>
+              <input
+                class="rematrix_corners corners_input disable_animation"
+                type="text"
+                id="ig_username"
+              />
+            </div>
+            <div class="rematrix_input">
+              <label for="tg_username"><span>Telegram-username</span></label>
+              <input
+                class="rematrix_corners corners_input disable_animation"
+                type="text"
+                id="tg_username"
+              />
+            </div>
+            <div class="rematrix_input">
+              <label for="dc_username"><span>Discord-username</span></label>
+              <input
+                class="rematrix_corners corners_input disable_animation"
+                type="text"
+                id="dc_username"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="control_buttons" id="control_save" style="display: none">
+        <button class="rematrix_corners rematrix_button" id="post_save_button">
+          <div>
+            <span class="animated_text disable_animation">Save</span>
+          </div>
+        </button>
+      </div>
+    </section>
+    <textarea
+      type="text"
+      id="hidden_goods"
+      style="position: absolute; left: -9999px"
+      readonly
+    ></textarea>
+  </body>
+
+  <script type="module" src="/js/routes/user.js"></script>
+</html>
