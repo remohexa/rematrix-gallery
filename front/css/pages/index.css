@@ -1,0 +1,142 @@
+.homepage_layout {
+  width: 100dvw;
+  padding: 0 10px;
+  height: 100%;
+  min-height: calc(100dvh - 50px);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+header {
+  /* background-color: rgba(128, 128, 128, 0.137); */
+  width: 100%;
+  height: 50px;
+  /* overflow: hidden; */
+}
+header.buttons {
+  /* background-color: rgba(0, 0, 255, 0.403); */
+  width: 100%;
+  padding: 0 10px;
+  height: 1.8em;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  /* position: sticky;
+  top: 0; */
+}
+header .rematrix_button {
+  width: calc(96% / 3);
+  height: calc(100% + 10px);
+}
+.img_viewer {
+  width: 100%;
+  margin: 20px 0;
+  scrollbar-width: none;
+  box-sizing: content-box;
+  position: relative;
+  overflow: hidden;
+  /* column-count: 2;
+  column-gap: 5px;
+  flex: 1; */
+}
+/* header.buttons,
+.img_viewer {
+  padding: 0 2vw;
+} */
+footer {
+  background-color: rgba(59.9, 59.9, 59.9);
+  text-align: center;
+  color: white /*var(--accent-color)*/;
+  padding: 10px 10px;
+  font-size: 1em;
+  font-family: p;
+  border-top: white 1px solid;
+  display: grid;
+
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  /* margin: 0 -2vw; */
+}
+
+footer .LOGO {
+  margin: 0;
+  font-size: 40px;
+}
+footer #remoweb {
+  text-decoration: underline red;
+  font-family: p;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+#scroll_msg {
+  /* color: var(--accent-color); */
+  color: white;
+  text-shadow: -2px 1px 0px black;
+
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 20px;
+  /* text-shadow: 0 0 15px var(--accent-color); */
+  font-weight: bold;
+  font-family: p;
+  background: rgb(0, 96, 50);
+  /* margin: 0 -2vw; */
+}
+
+/* ---------------------------- */
+
+.footer {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+}
+
+.media_viewer .temploader {
+  display: flex;
+  position: relative;
+}
+.media_viewer .temploader-dot {
+  width: 1px;
+  height: 1px;
+}
+#index_main_loader {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  bottom: 50%;
+  width: 100%;
+}
+#index_main_loader .temploader-dot {
+  width: 10px;
+  height: 10px;
+}
+#welcome-message {
+  display: none; /*flex*/
+  position: absolute;
+  inset: 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100dvw;
+  height: 100dvh;
+  pointer-events: none;
+}
+#welcome-message p {
+  all: unset;
+  width: 90dvw;
+  font-size: 1em;
+  color: var(--accent-color);
+  text-shadow: -2px 1px 0px black;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 20px;
+  font-weight: bold;
+  font-family: p;
+  margin-bottom: 10px;
+}

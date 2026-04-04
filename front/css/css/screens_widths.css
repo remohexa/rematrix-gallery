@@ -1,0 +1,53 @@
+/*Small phones*/
+@media (max-height: 670px) {
+}
+/* Phones */
+@media (max-width: 767px) {
+}
+/* Small screens */
+@media (min-width: 768px) {
+  .LOGO {
+    font-size: 65px;
+  }
+  .homepage_layout {
+    grid-template-areas:
+      "h b"
+      "c c"
+      "f f";
+    grid-template-rows: 50px 20fr 0vh;
+  }
+  header.buttons {
+    justify-content: end;
+  }
+  .rematrix_corners {
+    --thickness: 0.1vw !important;
+    --width: 1.5vh !important;
+  }
+  header .rematrix_button {
+    margin-top: 10px;
+    z-index: 0;
+    width: 150px;
+    height: 3.9vh;
+  }
+  header.buttons button:nth-child(1) {
+    display: none;
+  }
+  header.buttons button:nth-child(2) {
+    display: none;
+  }
+  header.buttons div:nth-child(3) {
+    margin: 1em;
+  }
+  .img_viewer {
+    column-count: auto;
+    column-width: 300px;
+    column-gap: 10px;
+    margin: 0px auto;
+  }
+}
+/* Medium screens */
+@media (min-width: 992px) {
+}
+/* Large screens */
+@media (min-width: 1200px) {
+}

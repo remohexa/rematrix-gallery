@@ -1,0 +1,70 @@
+img > .rematrix_corners {
+  padding: 4px;
+  box-sizing: border-box;
+  animation: none;
+  --alpha: 1;
+}
+.homepage_img {
+  /* display: block; */
+
+  display: block;
+  height: auto;
+  break-inside: avoid-column;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  box-sizing: border-box;
+  width: 100%;
+  /* max-height: 250px; */
+}
+.img_viewer span {
+  /* margin: 0 0 5px;
+  padding: 2px;
+  width: 50%;
+   */
+  box-sizing: border-box;
+  width: 100%;
+  padding: 3px;
+  margin: 0px 0 10px;
+}
+
+.media_viewer {
+  margin: 0px 0 10px;
+  padding: 3px;
+  position: absolute;
+  will-change: transform;
+  box-sizing: border-box;
+}
+.media_viewer iframe {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  object-fit: contain;
+  box-sizing: border-box;
+  display: block;
+  /* max-height: 250px; */
+}
+.media_view_wrapper {
+  display: flex;
+  text-shadow: 0.5px 0.7px black, -1px 1.1px var(--Matrix-green);
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  line-height: 20px;
+  font-weight: bold;
+  font-family: p;
+  background: rgb(0, 96, 50);
+  /* padding: 3px; */
+  overflow: hidden;
+  width: 100%;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+.media_view_wrapper div {
+  color: inherit;
+  user-select: none;
+  padding: 5px 5px;
+}

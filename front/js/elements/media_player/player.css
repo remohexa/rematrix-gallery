@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "p";
+  src: url("/js/elements/media_player/assets/fonts/paragraph.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  --accent-color: rgb(105, 240, 174, 1);
+}
+
+body {
+  margin: 0;
+  background: #000;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#player {
+  position: relative;
+  flex: 1;
+  background: #000;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  /* height: auto; */
+  object-fit: contain;
+  display: none;
+  position: relative;
+  z-index: 1;
+}
+
+#visualizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#player.audio-mode #visualizer {
+  opacity: 1;
+}
+
+#center-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.play-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+  background: rgb(105, 105, 105, 0.4);
+  border-radius: 50px;
+  backdrop-filter: blur(2px);
+}
+.play-icon svg {
+  filter: drop-shadow(-2px 1px 0px rgba(255, 255, 255, 0.6));
+  fill: rgba(105, 240, 174, 0.6);
+}
+.play-icon svg:hover {
+  filter: drop-shadow(-2px 1px 0px rgba(105, 240, 174, 0.6));
+  fill: rgba(255, 255, 255, 0.6);
+}
+/* .play-icon i {
+  all: unset;
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  background-color: red;
+  padding: 10px;
+
+
+  text-shadow: -2px 1px 0px white;
+  transition: all 0.2s ease;
+  user-select: none;
+} */
+#center-btn:hover .play-icon {
+  transform: scale(1.08);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#center-btn:hover .play-icon i {
+  color: #fff;
+  text-shadow: -2px 1px 0px black;
+}
+
+#player.video-playing #center-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#player.audio-playing #center-btn {
+  opacity: 0 !important;
+  pointer-events: auto !important;
+}
+
+#timeline-container {
+  width: 100%;
+  background: #000;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+}
+
+#timeline {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  position: relative;
+  transition: height 0.2s ease;
+  margin: 0;
+}
+
+#progress-bar {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background: #00ff88;
+  transition: width 0.05s linear;
+  left: 0;
+  top: 0;
+}
+
+#time-container {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  justify-content: space-between;
+  padding: 8px 12px;
+}
+
+.time-bubble {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: p;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 5px;
+  border-radius: 5px;
+  user-select: none;
+  background-color: rgb(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 5;
+}
+
+.loader-dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.control-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  z-index: 3;
+  opacity: 0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+#player:hover .control-btn {
+  opacity: 1;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: scale(1.1);
+}
+#fps-counter {
+  display: none;
+  position: fixed;
+  top: 8px;
+  left: 10px;
+  font: 12px monospace;
+  color: #00ff88;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 6px;
+  border-radius: 4px;
+  z-index: 9999;
+  pointer-events: none;
+}

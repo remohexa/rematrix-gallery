@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rematrix Gallery</title>
+    <link rel="icon" href="/assets/icons/rema.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/elements/buttons_text_statics.css" />
+    <link rel="stylesheet" href="/css/pages/index.css" />
+    <link rel="stylesheet" href="/css/css/screens_widths.css" />
+    <link rel="stylesheet" href="/css/elements/media_elements.css" />
+  </head>
+  <header>
+    <div class="LOGO">
+      <a href="/">
+        <span>Re</span>
+        <span>Matrix</span>
+        <span>Gallery</span></a
+      >
+    </div>
+  </header>
+  <header class="buttons">
+    <button
+      id="register_button"
+      class="rematrix_corners corners_button rematrix_button"
+    >
+      <div>
+        <span class="animated_text">Register</span>
+      </div>
+    </button>
+    <button
+      id="uploud_button"
+      class="rematrix_corners corners_button rematrix_button"
+    >
+      <div>
+        <span class="animated_text">Upload</span>
+      </div>
+    </button>
+
+    <button
+      id="login_button"
+      class="rematrix_corners corners_button rematrix_button"
+    >
+      <div><span class="animated_text">Log-In</span></div>
+    </button>
+  </header>
+  <!-- style="background: transparent" -->
+  <body>
+    <div class="homepage_layout" id="homelayout">
+      <div class="temploader" id="index_main_loader">
+        <div class="temploader-dot"></div>
+        <div class="temploader-dot"></div>
+        <div class="temploader-dot"></div>
+      </div>
+      <section class="img_viewer" id="mediaViewer"></section>
+    </div>
+    <div id="welcome-message">
+      <p>
+        If you see this message, it means you’ve set everything up correctly!
+      </p>
+      <p>However, your server doesn't seem to have any posts.</p>
+      <p style="animation: animated_text linear 2.5s infinite">
+        Post something and refresh this page!
+      </p>
+    </div>
+    <div class="footer" id="the_real_footer">
+      <span id="scroll_msg"
+        >Our journey doesn't end here. Your contribution could be the next spark
+        that takes this small digital space to the next level..!</span
+      >
+
+      <footer>
+        <!-- <div class="LOGO">
+        <a href="/">
+          <span>Re</span>
+          <span>Matrix</span>
+          <span>Gallery</span></a
+        >
+      </div> -->
+
+        <a href="https://remohexa.com" target="_blank" class="another_a"
+          >remohexa↗</a
+        >
+
+        <a
+          href="https://github.com/remohexa/rematrix-gallery"
+          class="another_a"
+          target="_blank"
+          >Source code↗</a
+        >
+      </footer>
+    </div>
+  </body>
+  <script type="module" src="/js/index.js"></script>
+</html>

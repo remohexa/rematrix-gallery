@@ -1,0 +1,75 @@
+.homepage_layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100dvw;
+  height: calc(100dvh - 50px);
+}
+
+.buttons_login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer {
+  display: none;
+}
+.buttons_login .rematrix_button {
+  height: 3em;
+  width: calc(95% / 2);
+}
+.buttons_login .animated_text {
+  animation: none;
+  font-size: 1.1em;
+}
+
+.loginbox {
+  /* width: max-content(80vw) ; */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* height: em; */
+  font-size: 1em;
+  width: 90vw;
+  max-width: 22em;
+}
+.loginbox label span {
+  color: inherit;
+  user-select: none;
+}
+
+.loginbox .rematrix_input input {
+  height: 3em;
+  padding: 0 20px;
+}
+fieldset {
+  all: unset;
+  text-transform: uppercase;
+}
+.error_box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: p;
+}
+.cridbuttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  font-size: 1.5em;
+}
+#important_note {
+  color: red;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bolder;
+  text-shadow: -1px 0.9px #c34c4c;
+}
+
+/* ------------- */

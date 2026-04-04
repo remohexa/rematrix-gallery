@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rematrix Gallery</title>
+    <link rel="icon" href="/assets/icons/rema.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/elements/buttons_text_statics.css" />
+    <link rel="stylesheet" href="/css/css/screens_widths.css" />
+    <link rel="stylesheet" href="/css/pages/register_login.css" />
+    <link rel="stylesheet" href="/css/pages/user.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="LOGO">
+        <a href="/">
+          <span>Re</span>
+          <span>Matrix</span>
+          <span>Gallery</span>
+        </a>
+      </div>
+    </header>
+    <div class="homepage_layout" id="homePageLayout">
+      <section class="absloute_center">
+        <div class="loginbox transform animate_hidden" id="cridbox">
+          <div class="rematrix_input">
+            <label for="matrix_id_f"><span>Matrix-id</span></label>
+            <input
+              class="rematrix_corners corners_input"
+              type="text"
+              id="matrix_id_f"
+              readonly
+            />
+          </div>
+          <div class="rematrix_input">
+            <label for="matrix_key_f"
+              ><span id="matrix-id">Matrix-key</span></label
+            >
+            <input
+              class="rematrix_corners corners_input"
+              type="text"
+              id="matrix_key_f"
+              readonly
+            />
+          </div>
+          <p id="error_box2" class="error_box animate_hidden transform"></p>
+
+          <div class="cridbuttons">
+            <button
+              class="rematrix_corners corners_button rematrix_button"
+              id="copy_button"
+            >
+              <div>
+                <span id="cridCopyText" class="animated_text">Copy</span>
+              </div>
+            </button>
+            <button
+              class="rematrix_corners corners_button rematrix_button"
+              id="profile_button"
+            >
+              <div><span class="animated_text">Next</span></div>
+            </button>
+          </div>
+          <div id="important_note">
+            These are your generated credentials. Save them somewhere safe, as
+            you cannot reset your key or retrieve them later.
+          </div>
+        </div>
+        <div class="loginbox transform" id="loginbox">
+          <div class="rematrix_input">
+            <label for="username_f"
+              ><span id="username_label">User-name</span></label
+            >
+            <input
+              class="rematrix_corners corners_input"
+              type="text"
+              id="username_f"
+            />
+          </div>
+          <p id="error_box" class="error_box animate_hidden transform"></p>
+          <div class="buttons_login">
+            <button class="rematrix_corners rematrix_button" id="login_button">
+              <div><span class="animated_text">Log-in</span></div>
+            </button>
+            <button
+              class="rematrix_corners rematrix_button"
+              id="register_button"
+            >
+              <div>
+                <span class="animated_text transform" id="register_text"
+                  >Register</span
+                >
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="settings_box" style="display: none">
+        <div id="settings_box_container">
+          <div class="inner_profile">
+            <div class="rematrix_corners imgcontainer">
+              <div class="temploader" id="img_loader">
+                <div class="temploader-dot"></div>
+                <div class="temploader-dot"></div>
+                <div class="temploader-dot"></div>
+              </div>
+              <div class="temploader" precent id="img_loader_precent"></div>
+              <img id="pfp_img" class="pfp_image" src="" alt="" />
+            </div>
+
+            <div class="user_info">
+              <span class="green_p">( Username )</span>
+              <p class="grey_p" id="post_register_user_name"></p>
+              <span class="green_p">( Matrix id )</span>
+              <p class="grey_p" id="post_register_matrix_id"></p>
+            </div>
+          </div>
+          <div class="inner_profile_controls">
+            <div class="control_taps">
+              <span class="multiple_choices_span" id="control_taps_1" enabled
+                >Profile picture</span
+              >
+              <span class="multiple_choices_span" id="control_taps_2"
+                >Socials</span
+              >
+            </div>
+            <div class="pfp_controls" id="pfp_contorls">
+              <p class="grey_p">Pick from</p>
+              <button
+                class="rematrix_corners rematrix_button"
+                id="gallery_pick_button"
+              >
+                <div>
+                  <span class="animated_text disable_animation">Gallery</span>
+                </div>
+              </button>
+              <div class="">
+                <button
+                  class="rematrix_corners rematrix_button"
+                  error
+                  id="default_pfp_button"
+                >
+                  <div>
+                    <span class="animated_text disable_animation">Default</span>
+                  </div>
+                </button>
+              </div>
+              <p class="grey_p">Generate Matrix picture</p>
+
+              <div class="rematrix_input">
+                <label for="pfp_seed"><span>Seed</span></label>
+                <input
+                  placeholder="Random"
+                  maxlength="100"
+                  class="rematrix_corners corners_input disable_animation"
+                  type="text"
+                  id="pfp_seed"
+                />
+              </div>
+              <button
+                class="rematrix_corners rematrix_button"
+                id="generate_button"
+              >
+                <div>
+                  <span class="animated_text disable_animation">Generate</span>
+                </div>
+              </button>
+              <button
+                class="rematrix_corners rematrix_button"
+                id="reset_button"
+              >
+                <div>
+                  <span class="animated_text disable_animation">Reset</span>
+                </div>
+              </button>
+              <div id="options_parent">
+                <p class="green_p" style="margin-bottom: 0">Options</p>
+              </div>
+            </div>
+            <div
+              class="account_controls"
+              id="account_controls"
+              style="display: none"
+            >
+              <div class="rematrix_input">
+                <label for="ig_username"><span>Instagram-username</span></label>
+                <input
+                  class="rematrix_corners corners_input disable_animation"
+                  type="text"
+                  id="ig_username"
+                />
+              </div>
+              <div class="rematrix_input">
+                <label for="tg_username"><span>Telegram-username</span></label>
+                <input
+                  class="rematrix_corners corners_input disable_animation"
+                  type="text"
+                  id="tg_username"
+                />
+              </div>
+              <div class="rematrix_input">
+                <label for="dc_username"><span>Discord-username</span></label>
+                <input
+                  class="rematrix_corners corners_input disable_animation"
+                  type="text"
+                  id="dc_username"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="control_buttons">
+          <button class="rematrix_corners rematrix_button" id="go_back">
+            <div>
+              <span class="animated_text disable_animation">Go-Back</span>
+            </div>
+          </button>
+          <button
+            class="rematrix_corners rematrix_button"
+            id="post_save_button"
+          >
+            <div>
+              <span class="animated_text disable_animation">Save</span>
+            </div>
+          </button>
+        </div>
+      </section>
+    </div>
+    <textarea
+      type="text"
+      id="hidden_goods"
+      style="position: absolute; left: -9999px"
+      readonly
+    ></textarea>
+  </body>
+  <script type="module" src="/js/account/register.js"></script>
+</html>

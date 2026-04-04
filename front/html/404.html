@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rematrix Gallery</title>
+    <link rel="icon" href="/assets/icons/rema.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/elements/buttons_text_statics.css" />
+    <link rel="stylesheet" href="/css/css/screens_widths.css" />
+  </head>
+  <header>
+    <div class="LOGO">
+      <a href="/">
+        <span>Re</span>
+        <span>Matrix</span>
+        <span>Gallery</span></a
+      >
+    </div>
+  </header>
+
+  <body>
+    <section class="lostconn" id="lostconnection_box">
+      <div class="corners rematrix_corners" error>
+        <div class="lostcon_container">
+          <div class="text">404</div>
+          <h3>
+            <span id="lost_con_text">This page doesn't exist.</span>
+          </h3>
+          <div class="refresh_container">
+            <button
+              id="refresh_button"
+              error
+              class="rematrix_corners corners_button rematrix_button"
+              onclick="location.href='/'"
+            >
+              <div>
+                <span class="animated_text">Home page</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const params = new URLSearchParams(location.search);
+    if (params.get("u") !== null) {
+      lost_con_text.innerText = "This user doesn't exist.";
+    }
+  </script>
+</html>

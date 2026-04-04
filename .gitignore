@@ -1,0 +1,5 @@
+.vscode
+/media
+**.db
+**/__pycache__ 
+localnotes.md

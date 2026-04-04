@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rematrix Gallery</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/rema.ico" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/elements/buttons_text_statics.css" />
+    <link rel="stylesheet" href="/css/pages/index.css" />
+    <link rel="stylesheet" href="/css/css/screens_widths.css" />
+    <link rel="stylesheet" href="/css/pages/register_login.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="LOGO">
+        <a href="/">
+          <span>Re</span>
+          <span>Matrix</span>
+          <span>Gallery</span>
+        </a>
+      </div>
+    </header>
+    <div class="homepage_layout" id="homePageLayout">
+      <section class="absloute_center">
+        <div class="loginbox" id="boxxx">
+          <div class="rematrix_input">
+            <label for="matrix_id_f"
+              ><span id="matrix_id">Matrix-id</span></label
+            >
+            <input
+              class="rematrix_corners corners_input"
+              type="text"
+              id="matrix_id_f"
+            />
+          </div>
+
+          <div class="rematrix_input">
+            <label for="matrix_key_f"
+              ><span id="matrix_key">Matrix-key</span></label
+            >
+            <input
+              class="rematrix_corners corners_input"
+              type="text"
+              id="matrix_key_f"
+            />
+          </div>
+          <p id="error_box" class="error_box animate_hidden transform"></p>
+          <div class="buttons_login">
+            <button
+              class="rematrix_corners rematrix_button"
+              id="register_button"
+            >
+              <div><span class="animated_text">Register</span></div>
+            </button>
+
+            <button class="rematrix_corners rematrix_button" id="login_button">
+              <div><span class="animated_text">Log-In</span></div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer></footer>
+    </div>
+  </body>
+  <script type="module" src="/js/account/login.js"></script>
+</html>
