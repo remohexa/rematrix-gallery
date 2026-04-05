@@ -5,30 +5,31 @@
 	<h3>A local, self contained media network running entirely on wifi hotspot by taking advantage of captive portals</h3>
 </div>
 
-<div align="center" style="padding: 0 0 10px;">
-   <a href="repostuff/assets/screenshots/gifs/captive.gif"><img src="repostuff/assets/screenshots/gifs/captive.gif" height=350></a>
-</div>
-
-<div align="center" >
-  <div style="display:flex; gap:5px; overflow-x:auto; padding: 0 0 10px; min-height=500px">
-    <a href="repostuff/assets/screenshots/images/index.webp"><img src="repostuff/assets/screenshots/gifs/index.gif"></a>
-    <a href="repostuff/assets/screenshots/images/register-page.png"><img src="repostuff/assets/screenshots/gifs/register-page-reg.gif" ></a>
-    <a href="repostuff/assets/screenshots/images/login-page.png"><img src="repostuff/assets/screenshots/gifs/login-page.gif"></a>
-    <a href="repostuff/assets/screenshots/images/user-page.webp"><img src="repostuff/assets/screenshots/gifs/user-page.gif" ></a>
-    <a href="repostuff/assets/screenshots/images/user-edit.webp"><img src="repostuff/assets/screenshots/gifs/user-edit.gif" ></a> 
-    <a href="repostuff/assets/screenshots/images/upload-page.webp"><img src="repostuff/assets/screenshots/gifs/upload-page.gif" ></a>
-    <a href="repostuff/assets/screenshots/gifs/post-page-audio.gif"><img src="repostuff/assets/screenshots/gifs/post-page-audio.gif" ></a>
-    <a href="repostuff/assets/screenshots/images/post-page-normal.webp"><img src="repostuff/assets/screenshots/gifs/post-page-normal.gif" ></a>
-    <a href="repostuff/assets/screenshots/images/post-page-deleted.png"><img src="repostuff/assets/screenshots/gifs/post-page-deleted.gif" ></a>
-    <a href="repostuff/assets/screenshots/images/post-page-404.png"><img src="repostuff/assets/screenshots/gifs/post-page-404.gif" ></a>
-    <a href="repostuff/assets/screenshots/images/post-page-metadata.webp"><img src="repostuff/assets/screenshots/gifs/post-page-metadata.gif" ></a>
-    <a href="repostuff/assets/screenshots/images/user-edit-socials.webp"><img src="repostuff/assets/screenshots/gifs/user-edit-socials.gif" ></a>
-  </div>
-
-<sub>Scroll to see more</sub>
-<br>
+<div align="center">
+<table>
+<tr>
+<td colspan="4" align="center"><a href="repostuff/assets/screenshots/gifs/captive.gif"><img src="repostuff/assets/screenshots/gifs/captive.gif" height=350></a></td>
+</tr>
+<tr>
+<td><a href="repostuff/assets/screenshots/images/index.webp"><img src="repostuff/assets/screenshots/gifs/index.gif"></a></td>
+<td><a href="repostuff/assets/screenshots/images/register-page.png"><img src="repostuff/assets/screenshots/gifs/register-page-reg.gif"></a></td>
+<td><a href="repostuff/assets/screenshots/images/login-page.png"><img src="repostuff/assets/screenshots/gifs/login-page.gif"></a></td>
+<td><a href="repostuff/assets/screenshots/images/user-page.webp"><img src="repostuff/assets/screenshots/gifs/user-page.gif"></a></td>
+</tr>
+<tr>
+<td><a href="repostuff/assets/screenshots/images/user-edit.webp"><img src="repostuff/assets/screenshots/gifs/user-edit.gif"></a></td>
+<td><a href="repostuff/assets/screenshots/images/upload-page.webp"><img src="repostuff/assets/screenshots/gifs/upload-page.gif"></a></td>
+<td><a href="repostuff/assets/screenshots/gifs/post-page-audio.gif"><img src="repostuff/assets/screenshots/gifs/post-page-audio.gif"></a></td>
+<td><a href="repostuff/assets/screenshots/images/post-page-normal.webp"><img src="repostuff/assets/screenshots/gifs/post-page-normal.gif"></a></td>
+</tr>
+<tr>
+<td><a href="repostuff/assets/screenshots/images/post-page-deleted.png"><img src="repostuff/assets/screenshots/gifs/post-page-deleted.gif"></a></td>
+<td><a href="repostuff/assets/screenshots/images/post-page-404.png"><img src="repostuff/assets/screenshots/gifs/post-page-404.gif"></a></td>
+<td><a href="repostuff/assets/screenshots/images/post-page-metadata.webp"><img src="repostuff/assets/screenshots/gifs/post-page-metadata.gif"></a></td>
+<td><a href="repostuff/assets/screenshots/images/user-edit-socials.webp"><img src="repostuff/assets/screenshots/gifs/user-edit-socials.gif"></a></td>
+</tr>
+</table>
 <sub>Click any picture to open higher resolution versions [Not animated]</sub>
-
 </div>
 <br>
 
@@ -1482,6 +1483,7 @@ rsn_pairwise=CCMP
 ```
 
 Taking the very first ip on each boot:
+
 Create `/etc/local.d/wlan0.start` and add the following inside
 
 ```
@@ -1527,7 +1529,13 @@ rc-update add hostapd default
 rc-update add local default
 ```
 
-And that's it! You should be good to go, just restart your device and look if your hotspot popped up.
+Creating the missing logs directory inside the working directory:
+```
+mkdir /srv/rematrix-gallery/logs
+```
+
+
+And that's it! You should be good to go, just reboot your device and look if your hotspot popped up.
 
 If not, check out `rc-status` and look if any service crashed. if none, make sure all of the previous process we just added are actually enabled and appearing when you run `rc-status`. If they doesn't appear, it's a pretty neat problem I faced. It's an `openrc` cache issue.
 
@@ -1540,7 +1548,7 @@ touch /run/openrc/softlevel
 reboot
 ```
 
-You might want to check this [section](#serving-Setup) though if you wanna fine tune your serving config.
+You might want to check this [section](#serving-configuration) if you wanna fine tune your serving config.
 
 ### Lan Hosting
 
@@ -1548,25 +1556,17 @@ Just look inside this [section](#standard-lan-hosting).
 
 ## Known issues
 
-Currently, I didn't have enough time to expand the support and make the right frontend layout for widescreens.
+- Wide screen support isn’t fully ready yet, but I’m working on it.
 
-And I'm sure there's other problems that I can't call for now. Would make sure to update this whenever I spot something.
+- The Android captive portal turned out to be pretty limited. While it does show the feed correctly and has no problem with the auth flow or generating pictures on the user page or during registration, it unfortunately doesn’t allow selecting a file on the upload page. I haven’t figured out how to handle that part yet.
+
+- Android Firefox is causing issues with the flex layout in some parts of the website.
 
 ## Contributing
 
 Fixing a typo, clarifying something in the readme, adding a whole new feature, or porting this to another device. All of which is genuinely welcomed.
 
 And for sure, if anything broke while you're navigating any part of this. Make sure to open an issue.
-
-## P.S
-
-This took a lot of time. Almost 3 weeks to just finish writing this readme. Ngl, the whole project was just tiring and insanely time consuming.
-
-But I'm glad that this simple idea that popped into my mind almost 1.5y ago finally turned into reality.
-
-I learned a lot through the whole process. Built it as a challenge to myself more than anything else, and I'm glad I did.
-
-The usage of AI was pretty limited throughout the project. I never used it to write anything related to frontend, and only relied on it for some parts of the [deterministic picture generator](deterministic-picture-generator) and the [media player visuals](#media-player-visualizer), mainly with the math parts.
 
 ## Credits & Licensing
 
@@ -1585,3 +1585,14 @@ The usage of AI was pretty limited throughout the project. I never used it to wr
 #### guifx-v2-transports.ttf sourced from: unknown origin ([Licence](front/assets/fonts/licenses/guifx-v2-transports/license.txt))
 
 > Full font license texts are available under `front/assets/fonts/licenses`
+
+
+## P.S
+
+This took a lot of time. Almost 3 weeks to just finish writing this readme. Ngl, the whole project was just tiring and insanely time consuming.
+
+But I'm glad that this simple idea that popped into my mind almost 1.5y ago finally turned into reality.
+
+I learned a lot through the whole process. Built it as a challenge to myself more than anything else, and I'm glad I did.
+
+The usage of AI was pretty limited throughout the project. I never used it to write anything related to frontend, and only relied on it for some parts of the [deterministic picture generator](#deterministic-picture-generator) and the [media player visuals](#media-player-visualizer), mainly with the math parts.
