@@ -36,48 +36,50 @@
       <section class="post_section">
         <div id="media_container" class="rematrix_corners"></div>
 
-        <h1 id="title"></h1>
-        <p id="disc" style="display: none"></p>
+        <div id="details_container">
+          <h1 id="title"></h1>
+          <p id="disc" style="display: none"></p>
 
-        <div class="post_meta">
-          <div class="user" id="user_container" style="width: 100%">
-            <div class="profile">
-              <span id="pfp_picture"></span>
-              <div>
-                <span id="matrix_id" matrix_id=""></span>
-                <span id="socials_container">
-                  <span id="dc_link" class="dc_svg" target="_blank"></span>
-                  <a id="ig_link" class="ig_svg" target="_blank"></a>
-                  <a id="tg_link" class="pn_svg" target="_blank"></a>
-                </span>
+          <div class="post_meta">
+            <div class="user" id="user_container" style="width: 100%">
+              <div class="profile">
+                <span id="pfp_picture"></span>
+                <div>
+                  <span id="matrix_id" matrix_id=""></span>
+                  <span id="socials_container">
+                    <span id="dc_link" class="dc_svg" target="_blank"></span>
+                    <a id="ig_link" class="ig_svg" target="_blank"></a>
+                    <a id="tg_link" class="pn_svg" target="_blank"></a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div id="post_buttons">
-          <a href="" id="download_media_button">
+          <div id="post_buttons">
+            <a href="" id="download_media_button">
+              <button
+                no_animated_corner
+                class="rematrix_corners rematrix_button"
+                accent
+              >
+                <div>
+                  <span class="animated_text">Download</span>
+                </div>
+              </button>
+            </a>
             <button
               no_animated_corner
-              class="rematrix_corners rematrix_button"
               accent
+              class="rematrix_corners rematrix_button"
+              id="meta_data_button"
             >
               <div>
-                <span class="animated_text">Download</span>
+                <span class="animated_text">Metadata</span>
               </div>
             </button>
-          </a>
-          <button
-            no_animated_corner
-            accent
-            class="rematrix_corners rematrix_button"
-            id="meta_data_button"
-          >
-            <div>
-              <span class="animated_text">Metadata</span>
-            </div>
-          </button>
+          </div>
+          <textarea disabled wrap="off" id="meta_data_block"></textarea>
         </div>
-        <textarea disabled wrap="off" id="meta_data_block"></textarea>
       </section>
     </div>
     <textarea

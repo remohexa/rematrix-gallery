@@ -75,7 +75,7 @@ video {
   transition: all 0.2s ease;
   background: rgb(105, 105, 105, 0.4);
   border-radius: 50px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px) invert(0.15);
 }
 .play-icon svg {
   filter: drop-shadow(-2px 1px 0px rgba(255, 255, 255, 0.6));

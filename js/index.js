@@ -80,7 +80,7 @@ const _mediaViewer = $("mediaViewer");
 const _masonryInst = new mansoryViewer(_mediaViewer, {
   minWidth: 150,
   gap: 7.5,
-  max_cols: 3,
+  max_cols: 4,
 });
 window.addEventListener("load", () => _masonryInst.layout());
 const ro = new ResizeObserver(() => _masonryInst.layout());
