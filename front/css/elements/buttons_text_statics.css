@@ -372,6 +372,7 @@
 
 .rematrix_input label {
   all: unset;
+  justify-content: center;
   text-transform: uppercase;
   display: flex !important;
   justify-self: center !important;
