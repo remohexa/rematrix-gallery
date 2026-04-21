@@ -1,3 +1,7 @@
+# Copyright (C) 2026 remohexa
+# SPDX-License-Identifier: GPL-3.0
+# Github: https://github.com/remohexa/rematrix-gallery
+
 import json, uuid, random, time, hashlib, os, math, base64, subprocess, io
 from typing import Literal, Optional
 from utils.encryption import JWE_handle

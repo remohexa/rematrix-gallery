@@ -1,3 +1,7 @@
+// Copyright (C) 2026 remohexa
+// SPDX-License-Identifier: GPL-3.0
+// Github: https://github.com/remohexa/rematrix-gallery
+
 const $ = (i) => document.getElementById(i);
 const video = $("video");
 const canvas = $("visualizer");

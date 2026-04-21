@@ -1,3 +1,7 @@
+// Copyright (C) 2026 remohexa
+// SPDX-License-Identifier: GPL-3.0
+// Github: https://github.com/remohexa/rematrix-gallery
+
 // animations
 import { $ } from "../js/root.js";
 export function loadCss() {

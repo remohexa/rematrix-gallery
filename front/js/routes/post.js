@@ -1,12 +1,12 @@
+// Copyright (C) 2026 remohexa
+// SPDX-License-Identifier: GPL-3.0
+// Github: https://github.com/remohexa/rematrix-gallery
 import {
   api,
   $,
-  setCookie,
   checkUser,
   routes,
-  UserState,
   fetchPost,
-  buildMediaElement,
   connectionLost,
   checkImg,
   randomQoutes,

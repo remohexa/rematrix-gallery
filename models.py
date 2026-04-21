@@ -1,3 +1,7 @@
+# Copyright (C) 2026 remohexa
+# SPDX-License-Identifier: GPL-3.0
+# Github: https://github.com/remohexa/rematrix-gallery
+
 from typing import List, Optional
 from pydantic import BaseModel
 

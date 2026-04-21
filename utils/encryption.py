@@ -1,3 +1,7 @@
+# Copyright (C) 2026 remohexa
+# SPDX-License-Identifier: GPL-3.0
+# Github: https://github.com/remohexa/rematrix-gallery
+
 from jose import jwe,jwt
 from utils.public_vars import PublicVars
 from pwdlib import PasswordHash

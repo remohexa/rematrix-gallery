@@ -1,3 +1,6 @@
+// Copyright (C) 2026 remohexa
+// SPDX-License-Identifier: GPL-3.0
+// Github: https://github.com/remohexa/rematrix-gallery
 import { getFFileHash } from "./elements/js-sha256.js";
 import { IndexedDB } from "./indexedDB.js";
 const apiUrl = `${location.origin}/a`;

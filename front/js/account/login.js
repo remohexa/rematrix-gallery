@@ -1,8 +1,10 @@
+// Copyright (C) 2026 remohexa
+// SPDX-License-Identifier: GPL-3.0
+// Github: https://github.com/remohexa/rematrix-gallery
 import { missingField, loadCss, showErrorBoxes } from "../styles.js";
 import {
   api,
   $,
-  setCookie,
   checkUser,
   routes,
   UserState,
