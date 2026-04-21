@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import hashes
 from cryptography.fernet import Fernet
-from utils.genbackico import (
+from repattern import (
     Generate as GenImg,
     Delusional_Background_Options as delOptions,
     Psychedelic_Background_Options as psychOptions,

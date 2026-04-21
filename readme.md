@@ -64,7 +64,7 @@ Anyway, here's the table of contents:
 - [**Backend**](#backend)
   - [The captive portal](#the-captive-portal)
   - [Internal Logic](#internal-logic)
-  - [Deterministic picture generator](#deterministic-picture-generator)
+  - [Deterministic picture generator (repattern)](#deterministic-picture-generator-repattern)
   - [API Endpoints](#api-endpoints)
 - [**Frontend**](#frontend)
 - [**Media Player Visualizer**](#media-player-visualizer)
@@ -290,13 +290,17 @@ There's just one row in total inside of that table, which hold all of the previo
 
 </details>
 
-### Deterministic picture generator
+### Deterministic picture generator ([repattern](https://pypi.org/project/repattern/))
 
-**I'll keep the tech details till I make an official repo for this. And for sure you can try it yourself by using `Generate()` inside [utils/genbackico.py], or even better using the wrapper I made for rematrix-gallery by calling `Utils().generate_picture()` inside [utils/utils.py].**
+`repattern` is another project I worked on. A seed based background and identicon generator, with far more options than a simple identicon.
 
-**But one thing worth mentioning though, every picture generated holds its generative data as EXIF metadata.**
+It's used inside `rematrix` to generate user profile pictures on registering, and later to let users generate and customize their own.
 
-**Anyway, here's some results:**
+You can pick block colors, make them round, add gradients, and blend them over a generated background. The generator supports two background types: delusional and psychedelic. Effects like cybercore, early internet, and pixelation can be applied per layer or on the final composite.
+
+It's pure Python, depends only on numpy and Pillow, and uses typed option classes so your IDE will suggest everything. You can save in multiple formats or return a buffer for streaming. Each saved image embeds its seed and non-default options as EXIF metadata.
+
+Here are some examples. You can install it or check its page on [pypi](https://pypi.org/project/repattern/) or [github](https://github.com/remohexa/repattern) if you'd like to learn more.
 
 <div align="center">
 
